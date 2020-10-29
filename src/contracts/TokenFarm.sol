@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.7.0;
 
 import "./DappToken.sol";
 import "./DaiToken.sol";
@@ -24,7 +24,7 @@ contract TokenFarm {
         // Require amount greater than 0
         require(_amount > 0, "amount cannot be 0");
 
-        // Trasnfer Mock Dai tokens to this contract for staking
+        // Transfer Mock Dai tokens to this contract for staking
         daiToken.transferFrom(msg.sender, address(this), _amount);
 
         // Update staking balance
